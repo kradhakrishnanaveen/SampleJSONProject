@@ -1,0 +1,6 @@
+1) Interface types cannot be made as Collection element type. 
+	Reason: Exception in thread "main" java.lang.RuntimeException: Unable to invoke no-args constructor for interface com.naveen.SampleJSON.ICoverageInfo. Register an InstanceCreator with Gson for this type may fix this problem.
+
+2)	Abstract types cannot be made as Collection element type.
+
+	Not able to form object. Even not able to create base object types
