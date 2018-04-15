@@ -4,14 +4,14 @@ import java.util.Collection;
 
 public class PolicyMainInfo {
 
-	Collection<AbstractCovInfo> covInfos;
+	Collection<LiabilityCovInfo> covInfos;
 	String policyOwnerName;
 	String communicationPath;
 	String city;
-	public Collection<AbstractCovInfo> getCovInfos() {
+	public Collection<LiabilityCovInfo> getCovInfos() {
 		return covInfos;
 	}
-	public void setCovInfos(Collection<AbstractCovInfo> covInfos) {
+	public void setCovInfos(Collection<LiabilityCovInfo> covInfos) {
 		this.covInfos = covInfos;
 	}
 	public String getPolicyOwnerName() {

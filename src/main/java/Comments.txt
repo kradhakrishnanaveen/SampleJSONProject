@@ -4,3 +4,10 @@
 2)	Abstract types cannot be made as Collection element type.
 
 	Not able to form object. Even not able to create base object types
+	
+	AbstractCovInfo [covName=null, covPrem=null, covTax=null]
+	In Else
+	AbstractCovInfo [covName=null, covPrem=null, covTax=null]
+	
+3) If Class type is same and Collection type
+	Able to create JSON for Collection of Objects and able to form Object from the generated JSON String. 

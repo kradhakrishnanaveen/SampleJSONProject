@@ -25,7 +25,7 @@ public class App
         polMainInfo.setCommunicationPath("Zurich");
         polMainInfo.setPolicyOwnerName("Naveen K R");
         polMainInfo.setCity("Bangalore");
-        polMainInfo.covInfos = new ArrayList<AbstractCovInfo>();
+        polMainInfo.covInfos = new ArrayList<LiabilityCovInfo>();
         
         LiabilityCovInfo liabilityCovInfo1 = new LiabilityCovInfo();
         liabilityCovInfo1.numOfCoverages = 5;
@@ -39,7 +39,7 @@ public class App
         liabilityCovInfo2.polInfo = polInfo;        
         polMainInfo.covInfos.add(liabilityCovInfo2);
         
-        CollisionCovInfo collisionCovInfo = new CollisionCovInfo();
+/*        CollisionCovInfo collisionCovInfo = new CollisionCovInfo();
         collisionCovInfo.numOfCoverages = 4;
         collisionCovInfo.rsvName = "Collision One";
         collisionCovInfo.polInfo = polInfo;        
@@ -50,7 +50,7 @@ public class App
         compCovInfo.rsvName = "Comprehensive One";
         compCovInfo.polInfo = polInfo;        
         polMainInfo.covInfos.add(compCovInfo);
-        
+*/        
         String reqStr = gson.toJson(polMainInfo);
         
         System.out.println("Converted JSON String: \n " + reqStr);
