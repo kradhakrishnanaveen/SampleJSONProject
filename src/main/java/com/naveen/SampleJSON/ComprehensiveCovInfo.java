@@ -2,14 +2,14 @@ package com.naveen.SampleJSON;
 
 public class ComprehensiveCovInfo extends AbstractCovInfo {
 
-	String rsvName;
+	String compRsvName;
 	PolicyInformation polInfo;
 	int numOfCoverages;
 	public String getRsvName() {
-		return rsvName;
+		return compRsvName;
 	}
 	public void setRsvName(String rsvName) {
-		this.rsvName = rsvName;
+		this.compRsvName = rsvName;
 	}
 	public PolicyInformation getPolInfo() {
 		return polInfo;
@@ -25,7 +25,7 @@ public class ComprehensiveCovInfo extends AbstractCovInfo {
 	}
 	@Override
 	public String toString() {
-		return "LiabilityCovInfo [rsvName=" + rsvName + ", polInfo=" + polInfo
+		return "LiabilityCovInfo [rsvName=" + compRsvName + ", polInfo=" + polInfo
 				+ ", numOfCoverages=" + numOfCoverages + "]";
 	}
 }

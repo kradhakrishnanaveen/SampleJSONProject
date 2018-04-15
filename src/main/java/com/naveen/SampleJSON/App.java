@@ -25,32 +25,32 @@ public class App
         polMainInfo.setCommunicationPath("Zurich");
         polMainInfo.setPolicyOwnerName("Naveen K R");
         polMainInfo.setCity("Bangalore");
-        polMainInfo.covInfos = new ArrayList<LiabilityCovInfo>();
+        polMainInfo.covInfos = new ArrayList<AbstractCovInfo>();
         
         LiabilityCovInfo liabilityCovInfo1 = new LiabilityCovInfo();
         liabilityCovInfo1.numOfCoverages = 5;
-        liabilityCovInfo1.rsvName = "Liability One";
+        liabilityCovInfo1.liabilityRsvName = "Liability One";
         liabilityCovInfo1.polInfo = polInfo;
         polMainInfo.covInfos.add(liabilityCovInfo1);
         
         LiabilityCovInfo liabilityCovInfo2 = new LiabilityCovInfo();
         liabilityCovInfo2.numOfCoverages = 9;
-        liabilityCovInfo2.rsvName = "Liability Two";
+        liabilityCovInfo2.liabilityRsvName = "Liability Two";
         liabilityCovInfo2.polInfo = polInfo;        
         polMainInfo.covInfos.add(liabilityCovInfo2);
         
-/*        CollisionCovInfo collisionCovInfo = new CollisionCovInfo();
+        CollisionCovInfo collisionCovInfo = new CollisionCovInfo();
         collisionCovInfo.numOfCoverages = 4;
-        collisionCovInfo.rsvName = "Collision One";
+        collisionCovInfo.colRsvName = "Collision One";
         collisionCovInfo.polInfo = polInfo;        
         polMainInfo.covInfos.add(collisionCovInfo);
         
         ComprehensiveCovInfo compCovInfo = new ComprehensiveCovInfo();
         compCovInfo.numOfCoverages = 6;
-        compCovInfo.rsvName = "Comprehensive One";
+        compCovInfo.compRsvName = "Comprehensive One";
         compCovInfo.polInfo = polInfo;        
         polMainInfo.covInfos.add(compCovInfo);
-*/        
+        
         String reqStr = gson.toJson(polMainInfo);
         
         System.out.println("Converted JSON String: \n " + reqStr);
@@ -69,15 +69,15 @@ public class App
     	for (AbstractCovInfo covInfo : polMainInfo.covInfos) {
     		if (covInfo instanceof LiabilityCovInfo) {
     			System.out.println("LiabilityInformation"); 
-    			System.out.println(((LiabilityCovInfo) covInfo).rsvName);
+    			System.out.println(((LiabilityCovInfo) covInfo).liabilityRsvName);
     			System.out.println(((LiabilityCovInfo) covInfo).polInfo.comments);
     		} else if (covInfo instanceof CollisionCovInfo) {
     			System.out.println("CollisionCovInfo"); 
-    			System.out.println(((CollisionCovInfo) covInfo).rsvName);
+    			System.out.println(((CollisionCovInfo) covInfo).colRsvName);
     			System.out.println(((CollisionCovInfo) covInfo).polInfo.comments);
     		} else if (covInfo instanceof ComprehensiveCovInfo) {
     			System.out.println("ComprehensiveCovInfo"); 
-    			System.out.println(((ComprehensiveCovInfo) covInfo).rsvName);
+    			System.out.println(((ComprehensiveCovInfo) covInfo).compRsvName);
     			System.out.println(((ComprehensiveCovInfo) covInfo).polInfo.comments);
     		} else {
     			System.out.println("In Else");
